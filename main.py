@@ -5,9 +5,24 @@ passed_y_coordinates = tuple()
 
 results_data = {}
 
+# Deals with storing the data from the results.txt file
 eeg_results = open("eeg-data/eeg-results.txt")
 for line in eeg_results:
-  index, sf, uxf, uyf, bf = line.split()
-  results_data[index] = [sf, uxf, uyf, bf]
+ index, sf, uxf, uyf, bf = line.split(',')
 
-print(results_data)
+ # Setting our variables to integer data types
+ index = int(index)
+ sf = int(sf)
+ uxf = int(uxf)
+ uyf = int(uyf)
+ bf = int(bf)
+ 
+ results_data[index] = [sf, uxf, uyf, bf]
+
+# Finding out whether Non-Linear Independence
+# signals for a pair of x, y signals passed
+for record in results_data:
+  if results_data[record][3] == 1:
+    print('Pass for non linear independence')
+  else:
+    print('Fail for non linear independence')
