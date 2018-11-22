@@ -1,5 +1,4 @@
 # Author: Dillon de Silva
-
 def fetch_coordinates(record):
   # This is a stub
   if record <= 750:
@@ -12,9 +11,6 @@ def fetch_coordinates(record):
     # Open data folder with records from 2251 - 3000
   elif record <= 3750:
     # Open data folder with records from 3001 - 3750
-
-passed_x_coordinates = tuple()
-passed_y_coordinates = tuple()
 
 results_data = {}
 
