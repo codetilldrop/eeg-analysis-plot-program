@@ -1,5 +1,8 @@
 # Author: Dillon de Silva
 
+def fetch_coordinates():
+  # This is a stub
+
 passed_x_coordinates = tuple()
 passed_y_coordinates = tuple()
 
@@ -19,10 +22,14 @@ for line in eeg_results:
  
  results_data[index] = [sf, uxf, uyf, bf]
 
+coordinates = []
+
 # Finding out whether Non-Linear Independence
 # signals for a pair of x, y signals passed
 for record in results_data:
   if results_data[record][3] == 1:
+    # This is a stub
+    fetch_coordinates(results_data[record])
     print('Pass for non linear independence')
   else:
     print('Fail for non linear independence')
